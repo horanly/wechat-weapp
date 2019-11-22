@@ -1,0 +1,33 @@
+/**index.wxss**/
+
+.slide swiper {
+  height: 400rpx;
+}
+
+.slide image {
+  height: 400rpx;
+  width: 100%;
+}
+
+.board {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.board-item {
+  display: flex;
+  cursor: pointer;
+  border: 1rpx solid #eee;
+  margin: 40rpx;
+  padding: 40rpx;
+}
+
+.board-item text {
+  flex: 1;
+}
+
+.board-item image {
+  height: 40rpx;
+  width: 40rpx;
+}
