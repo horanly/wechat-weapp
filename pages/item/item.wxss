@@ -17,7 +17,7 @@
 }
 
 .info {
-    font-size: 22rpx;
+    font-size: 24rpx;
     color: #444;
     margin-top: 20rpx;
     width: 80%;
@@ -36,7 +36,7 @@
 
 .content {
     color: #555;
-    font-size: 22rpx;
+    font-size: 24rpx;
     /* padding: 2em; */
 }
 
