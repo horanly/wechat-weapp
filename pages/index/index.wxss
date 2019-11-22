@@ -1,33 +1,71 @@
 /**index.wxss**/
 
 .slide swiper {
-  height: 400rpx;
+  height: 480rpx;
 }
 
-.slide image {
-  height: 400rpx;
+.slide swiper image {
+  height: 480rpx;
   width: 100%;
 }
 
 .board {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
+  box-sizing: border-box;
+  background-color: #f8f9fb;
 }
 
 .board-item {
   display: flex;
+  flex-direction: column;
   cursor: pointer;
-  border: 1rpx solid #eee;
-  margin: 40rpx;
-  padding: 40rpx;
+  margin: 20rpx 0;
+  padding: 20rpx;
+  background-color: #fff;
 }
 
-.board-item text {
+.board-item .title {
+  display: flex;
+  margin-bottom: 10rpx;
+  width: 100%;
+}
+
+.board-item .title text {
   flex: 1;
+  font-size: 36rpx;
 }
 
-.board-item image {
-  height: 40rpx;
-  width: 40rpx;
+.board-item .title image {
+  height: 20rpx;
+  width: 20rpx;
+}
+
+.board-item .content {
+  height: 300rpx;
+}
+
+.board-item .content .inner {
+  display: flex;
+  flex-direction: row;
+  height: 300rpx;
+  width: 900rpx;
+}
+
+.board-item .content .inner .movie-item {
+  display: flex;
+  flex-direction: column;
+  width: 180rpx;
+  margin: 10rpx;
+}
+
+.board-item .content .inner .movie-item image {
+  width: 180rpx;
+  height: 250rpx;
+}
+
+.board-item .content .inner .movie-item text {
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 28rpx;
 }

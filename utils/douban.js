@@ -20,11 +20,7 @@ function fetchApi(type, params) {
  */
 
 async function find(type, page = 1, count = 20, search = '') {
-    const params = {
-        start: (page - 1) * count,
-        count: count,
-        city: getApp().data.currentCity
-    }
+    const params = { start: (page - 1) * count, count: count, city: getApp().data.currentCity }
     const res = await fetchApi(type, search ? Object.assign(params, { q: search }) : params)
     return res.data
 }
