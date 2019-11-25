@@ -1,8 +1,8 @@
 {
   "pages": [
+    "pages/user/user",
     "pages/index/index",
     "pages/search/search",
-    "pages/user/user",
     "pages/item/item",
     "pages/list/list",
     "pages/logs/logs"
@@ -14,14 +14,14 @@
   },
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
+    "navigationBarBackgroundColor": "#e54847",
+    "navigationBarTitleText": "电影推荐",
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
-    "color": "#666666",
-    "selectedColor": "#000000",
-    "borderStyle": "white",
+    "color": "#666",
+    "selectedColor": "#000",
+    "borderStyle": "black",
     "backgroundColor": "#f7f7f7",
     "list": [
       {
