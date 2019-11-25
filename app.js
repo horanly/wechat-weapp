@@ -48,6 +48,11 @@ App({
    * 当小程序初始化完成时，会触发 onLaunch (全局只触发一次)
    */
   onLaunch() {
+    // 展示本地存储能力
+    var logs = wx.getStorageSync('logs') || []
+    logs.unshift(Date.now())
+    wx.setStorageSync('logs', logs)
+    
     wechat.getLocation().then(res => {
       const { latitude, longitude } = res
       return baidu.getCityName(latitude, longitude)
