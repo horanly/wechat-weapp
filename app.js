@@ -58,6 +58,7 @@ App({
       return baidu.getCityName(latitude, longitude)
     }).then(name => {
       this.data.currentCity = name.replace('市', '')
+      wx.setStorageSync('currentCity', this.data.currentCity)
       console.log('currentCity:', this.data.currentCity)
     }).catch(err => {
       this.data.currentCity = '北京'

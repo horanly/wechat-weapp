@@ -41,6 +41,14 @@ Page({
       })
       wx.hideLoading()
     })
+  },
 
+  // onShareAppMessage 小程序分享函数
+  onShareAppMessage() {
+    return {
+      title: '电影推荐',
+      desc: '电影推荐',
+      path: '/pages/index'
+    }
   }
 })

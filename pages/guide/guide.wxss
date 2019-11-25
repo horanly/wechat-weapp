@@ -113,7 +113,8 @@ a:hover {
     bottom: 200rpx;
     left: 50%;
     width: 300rpx;
-    margin-left: -150rpx;
+    transform: translateX(-50%);
+    /* margin-left: -150rpx; */
     background-color: rgba(237, 237, 237, .6);
     color: #345;
     border: 1rpx solid rgba(237, 237, 237, .8);

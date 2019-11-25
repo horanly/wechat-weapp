@@ -21,7 +21,8 @@ function fetchApi(type, params) {
 
 async function find(type, page = 1, count = 20, search = '') {
     console.log(getApp().data);
-    const params = { start: (page - 1) * count, count: count, city: getApp().data.currentCity }
+    let city = wx.getStorageSync('currentCity')
+    const params = { start: (page - 1) * count, count: count, city: city }
     console.log(params);
     const res = await fetchApi(type, search ? Object.assign(params, { q: search }) : params)
     return res.data
