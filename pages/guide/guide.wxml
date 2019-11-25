@@ -1,0 +1,23 @@
+<view class="container">
+    <view class="wrapper">
+        <view class="belt">
+            <view class="t" style='--index: 0'></view>
+            <view class="t" style='--index: 1'></view>
+            <view class="t" style='--index: 2'></view>
+            <view class="t" style='--index: 3'></view>
+            <view class="t" style='--index: 4'></view>
+            <view class="t" style='--index: 5'></view>
+            <view class="t" style='--index: 6'></view>
+            <view class="t" style='--index: 7'></view>
+            <view class="t" style='--index: 8'></view>
+            <view class="t" style='--index: 9'></view>
+        </view>
+        <view class="box" style='--index: 0'></view>
+        <view class="box" style='--index: 1'></view>
+        <view class="box" style='--index: 2'></view>
+        <view class="box" style='--index: 3'></view>
+        <view class="box" style='--index: 4'></view>
+    </view>
+    <!-- <cover-image src=""></cover-image> -->
+    <button class="start" bindtap="handleStart" >立即体验</button>
+</view>
