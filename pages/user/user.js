@@ -20,28 +20,29 @@ Page({
   },
 
   getCache() {
-    return new Promise(resolve => {
-      app.wechat.getStorage('weChat-user-data')
-        .then(res => {
-          const { userInfo } = res.data
-          if (userInfo) {
-            return resolve(res.data)
-          } else if (this.data.canIUse) {
-            // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-            // 所以此处加入 callback 以防止这种情况
-            app.userInfoReadyCallback = res => {
-              this.setData({
-                userInfo: res.userInfo,
-                hasUserInfo: false
-              })
-            }
-          } else {
-            // 在没有 open-type=getUserInfo 版本的兼容处理
-            this.getUserInfo()
-          }
-          return resolve(null)
+    app.wechat.getSetting().then(res => {
+      // console.log(res, 'getCache')
+      if (res.authSetting["scope.userInfo"]) {
+        app.wechat.getStorage('weChat-user-data').then(data => {
+          const { userInfo } = data.data
+          // console.log(userInfo);
+          this.setData({
+            userInfo: userInfo,
+            hasUserInfo: false
+          })
         })
-        .catch(e => resolve(null))
+      } else if (this.data.canIUse) {
+        // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
+        // 所以此处加入 callback 以防止这种情况
+        app.userInfoReadyCallback = res => {
+          this.setData({
+            userInfo: res.userInfo,
+            hasUserInfo: false
+          })
+        }
+      } else {
+        this.getUserInfo()
+      }
     })
   },
 

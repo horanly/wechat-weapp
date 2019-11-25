@@ -16,6 +16,15 @@ function getUserInfo() {
     })
 }
 
+function getSetting () {
+    return new Promise((resolve, reject) => {
+        wx.getSetting ({
+            success: resolve,
+            fail: reject
+        })
+    })
+}
+
 function setStorage(key, value) {
     return new Promise((resolve, reject) => {
         wx.setStorage({ key: key, data: value, success: resolve, fail: reject })
@@ -40,6 +49,7 @@ function getLocation() {
 export default {
     login,
     getUserInfo,
+    getSetting,
     setStorage,
     getStorage,
     getLocation,

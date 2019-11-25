@@ -1,6 +1,6 @@
 .bg {
   height: 150px;
-  background-color: #d53e37;
+  background-color: #e54847;
 }
 
 .head {
