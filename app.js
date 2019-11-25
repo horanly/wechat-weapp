@@ -79,6 +79,10 @@ App({
       wx.switchTab({
         url: '/pages/index/index'
       })
+    } else {
+      wx.switchTab({
+        url: '/pages/guide/guide'
+    })
     }
   }
 })
