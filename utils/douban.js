@@ -1,5 +1,6 @@
 import fetch from './fetch'
-const URI = 'https://douban-api.uieee.com/v2/movie'
+// const URI = 'https://douban-api.uieee.com/v2/movie'
+const URI = 'https://douban.uieee.com/v2/movie'
 
 /**
  * @param  {String} type   类型，例如：'coming_soon'
